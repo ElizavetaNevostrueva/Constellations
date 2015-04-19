@@ -12,14 +12,7 @@ import android.widget.TextView;
 
 public class CurConstellationsActivity extends ActionBarActivity {
 
-    //private LocationManager locationManager;
     private GeoLocation geoLocation;
-    /*private TextView gpsCoordinates;
-    private TextView internetCoordinates;*/
-    /*private Double gpsLatitude = 0.0;
-    private Double gpsLongitude = 0.0;
-    private Double internetLatitude = 0.0;
-    private Double internetLongitude = 0.0;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,89 +20,25 @@ public class CurConstellationsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_cur_constellations);
 
         geoLocation = new GeoLocation(this);
-        /*gpsCoordinates = (TextView) findViewById(R.id.gpsCoordinates);
-        internetCoordinates = (TextView) findViewById(R.id.internetCoordinates);
-
-        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);*/
-
+        DbOfStars db = new DbOfStars(this);
+        db.dbConnect();
+        db.getStar();
+        db.getConstellation();
+        db.getStarInCon();
+        db.dbDisconnect();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         geoLocation.startListenGeoLocation();
-        /*locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                1000 * 10, 10, locationListener);
-        locationManager.requestLocationUpdates(
-                LocationManager.NETWORK_PROVIDER, 1000 * 10, 10,
-                locationListener);*/
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         geoLocation.stopListenGeoLocation();
-        //locationManager.removeUpdates(locationListener);
     }
-
-   /* private LocationListener locationListener = new LocationListener() {
-        @Override
-        public void onLocationChanged(Location location) {
-            setGeoLocationParameters(location);
-*//*            if (location == null)
-                return;
-            if (location.getProvider().equals(LocationManager.GPS_PROVIDER)) {
-                gpsCoordinates.setText("GPS lat:  "+String.valueOf(location.getLatitude())+
-                        "  long:  "+String.valueOf(location.getLongitude()));
-
-                *//**//*gpsLatitude = location.getLatitude();
-                gpsLongitude = location.getLongitude();*//**//*
-            } else if (location.getProvider().equals(
-                    LocationManager.NETWORK_PROVIDER)) {
-                internetCoordinates.setText("GPS lat:  "+String.valueOf(location.getLatitude())+
-                        "  long:  "+String.valueOf(location.getLongitude()));
-                //internetLatitude = location.getLatitude();
-                //internetLongitude = location.getLongitude();
-            }*//*
-            gpsCoordinates.setText("GPS lat:  "+gpsLatitude.toString()+
-                    "  long:  "+gpsLongitude.toString());
-            internetCoordinates.setText("Internet lat:  "+internetLatitude.toString()+
-                    "  long:  "+internetLongitude.toString());
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-        }
-
-        @Override
-        public void onProviderEnabled(String provider) {
-            setGeoLocationParameters(locationManager.getLastKnownLocation(provider));
-
-            gpsCoordinates.setText("GPS lat:  "+gpsLatitude.toString()+
-                    "  long:  "+gpsLongitude.toString());
-            internetCoordinates.setText("Internet lat:  "+internetLatitude.toString()+
-                    "  long:  "+internetLongitude.toString());
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {
-
-        }
-    };*/
-
-    /*private void setGeoLocationParameters(Location location) {
-        if (location == null)
-            return;
-        if (location.getProvider().equals(LocationManager.GPS_PROVIDER)) {
-            gpsLatitude = location.getLatitude();
-            gpsLongitude = location.getLongitude();
-        } else if (location.getProvider().equals(
-                LocationManager.NETWORK_PROVIDER)) {
-            internetLatitude = location.getLatitude();
-            internetLongitude = location.getLongitude();
-        }
-    };*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

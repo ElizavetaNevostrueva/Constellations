@@ -86,12 +86,12 @@ public class GeoLocation {
             gpsLatitude = location.getLatitude();
             gpsLongitude = location.getLongitude();
             gpsCoordinates.setText("GPS: "+ gpsLatitude.toString()+" "+ gpsLongitude.toString()+"\n");
-        } else if (location.getProvider().equals(
-                LocationManager.NETWORK_PROVIDER)) {
+        } else if (location.getProvider().equals(LocationManager.NETWORK_PROVIDER)) {
             internetLatitude = location.getLatitude();
             internetLongitude = location.getLongitude();
             internetCoordinates.setText("In: "+ internetLatitude.toString()+" "+ internetLongitude.toString());
         }
     }
+
 }
 

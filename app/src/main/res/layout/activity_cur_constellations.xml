@@ -20,4 +20,5 @@
         android:text="New Text"
         android:id="@+id/gpsCoordinates"
         android:layout_below="@+id/internetCoordinates" />
+
 </RelativeLayout>
