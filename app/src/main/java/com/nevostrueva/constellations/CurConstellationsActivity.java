@@ -12,64 +12,65 @@ import android.widget.TextView;
 
 public class CurConstellationsActivity extends ActionBarActivity {
 
-    private LocationManager locationManager;
-   // private GeoLocation geoLocation;
-    private TextView gpsCoordinates;
-    private TextView internetCoordinates;
-    private Double gpsLatitude = 0.0;
+    //private LocationManager locationManager;
+    private GeoLocation geoLocation;
+    /*private TextView gpsCoordinates;
+    private TextView internetCoordinates;*/
+    /*private Double gpsLatitude = 0.0;
     private Double gpsLongitude = 0.0;
     private Double internetLatitude = 0.0;
-    private Double internetLongitude = 0.0;
+    private Double internetLongitude = 0.0;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cur_constellations);
 
-        gpsCoordinates = (TextView) findViewById(R.id.gpsCoordinates);
+        geoLocation = new GeoLocation(this);
+        /*gpsCoordinates = (TextView) findViewById(R.id.gpsCoordinates);
         internetCoordinates = (TextView) findViewById(R.id.internetCoordinates);
 
-        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);*/
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-       // geoLocation.startListenGeoLocation();
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+        geoLocation.startListenGeoLocation();
+        /*locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
                 1000 * 10, 10, locationListener);
         locationManager.requestLocationUpdates(
                 LocationManager.NETWORK_PROVIDER, 1000 * 10, 10,
-                locationListener);
+                locationListener);*/
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-       // geoLocation.stopListenGeoLocation();
-        locationManager.removeUpdates(locationListener);
+        geoLocation.stopListenGeoLocation();
+        //locationManager.removeUpdates(locationListener);
     }
 
-    private LocationListener locationListener = new LocationListener() {
+   /* private LocationListener locationListener = new LocationListener() {
         @Override
         public void onLocationChanged(Location location) {
             setGeoLocationParameters(location);
-/*            if (location == null)
+*//*            if (location == null)
                 return;
             if (location.getProvider().equals(LocationManager.GPS_PROVIDER)) {
                 gpsCoordinates.setText("GPS lat:  "+String.valueOf(location.getLatitude())+
                         "  long:  "+String.valueOf(location.getLongitude()));
 
-                *//*gpsLatitude = location.getLatitude();
-                gpsLongitude = location.getLongitude();*//*
+                *//**//*gpsLatitude = location.getLatitude();
+                gpsLongitude = location.getLongitude();*//**//*
             } else if (location.getProvider().equals(
                     LocationManager.NETWORK_PROVIDER)) {
                 internetCoordinates.setText("GPS lat:  "+String.valueOf(location.getLatitude())+
                         "  long:  "+String.valueOf(location.getLongitude()));
                 //internetLatitude = location.getLatitude();
                 //internetLongitude = location.getLongitude();
-            }*/
+            }*//*
             gpsCoordinates.setText("GPS lat:  "+gpsLatitude.toString()+
                     "  long:  "+gpsLongitude.toString());
             internetCoordinates.setText("Internet lat:  "+internetLatitude.toString()+
@@ -95,9 +96,9 @@ public class CurConstellationsActivity extends ActionBarActivity {
         public void onProviderDisabled(String provider) {
 
         }
-    };
+    };*/
 
-    private void setGeoLocationParameters(Location location) {
+    /*private void setGeoLocationParameters(Location location) {
         if (location == null)
             return;
         if (location.getProvider().equals(LocationManager.GPS_PROVIDER)) {
@@ -108,7 +109,7 @@ public class CurConstellationsActivity extends ActionBarActivity {
             internetLatitude = location.getLatitude();
             internetLongitude = location.getLongitude();
         }
-    };
+    };*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -1,10 +1,12 @@
 package com.nevostrueva.constellations;
 
+import android.app.Activity;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.widget.TextView;
 
 /**
  * Created by User on 05.04.2015.
@@ -16,9 +18,15 @@ public class GeoLocation {
     private Double gpsLongitude = 0.0;
     private Double internetLatitude = 0.0;
     private Double internetLongitude = 0.0;
+    private TextView gpsCoordinates;
+    private TextView internetCoordinates;
+    private Activity activity;
 
-    public void getLocationManager(Context context){
+    public GeoLocation(Context context){
+        activity = (Activity) context;
         locationManager = (LocationManager) context.getSystemService(context.LOCATION_SERVICE);
+        gpsCoordinates = (TextView) activity.findViewById(R.id.gpsCoordinates);
+        internetCoordinates = (TextView) activity.findViewById(R.id.internetCoordinates);
     }
 
     public Double getGpsGeoLatitude(){
@@ -77,10 +85,12 @@ public class GeoLocation {
         if (location.getProvider().equals(LocationManager.GPS_PROVIDER)) {
             gpsLatitude = location.getLatitude();
             gpsLongitude = location.getLongitude();
+            gpsCoordinates.setText("GPS: "+ gpsLatitude.toString()+" "+ gpsLongitude.toString()+"\n");
         } else if (location.getProvider().equals(
                 LocationManager.NETWORK_PROVIDER)) {
             internetLatitude = location.getLatitude();
             internetLongitude = location.getLongitude();
+            internetCoordinates.setText("In: "+ internetLatitude.toString()+" "+ internetLongitude.toString());
         }
     }
 }
