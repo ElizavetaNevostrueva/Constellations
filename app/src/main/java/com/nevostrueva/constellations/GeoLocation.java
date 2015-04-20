@@ -21,12 +21,14 @@ public class GeoLocation {
     private TextView gpsCoordinates;
     private TextView internetCoordinates;
     private Activity activity;
+    private DBHelper dbHelper;
 
     public GeoLocation(Context context){
         activity = (Activity) context;
         locationManager = (LocationManager) context.getSystemService(context.LOCATION_SERVICE);
         gpsCoordinates = (TextView) activity.findViewById(R.id.gpsCoordinates);
         internetCoordinates = (TextView) activity.findViewById(R.id.internetCoordinates);
+        dbHelper=new DBHelper(context);
     }
 
     public Double getGpsGeoLatitude(){
@@ -61,6 +63,10 @@ public class GeoLocation {
         @Override
         public void onLocationChanged(Location location) {
             setGeoLocationParameters(location);
+            FindVisibleStars fvs = new FindVisibleStars();
+            //fvs.findVisibleStars(internetLongitude, internetLatitude,dbHelper);
+            FindVisibleConstellations.findVisibleConstellations(
+                    fvs.findVisibleStars(internetLongitude, internetLatitude,dbHelper),dbHelper);
         }
 
         @Override
@@ -71,6 +77,10 @@ public class GeoLocation {
         @Override
         public void onProviderEnabled(String provider) {
             setGeoLocationParameters(locationManager.getLastKnownLocation(provider));
+            FindVisibleStars fvs = new FindVisibleStars();
+            //fvs.findVisibleStars(internetLongitude, internetLatitude,dbHelper);
+            FindVisibleConstellations.findVisibleConstellations(
+                    fvs.findVisibleStars(internetLongitude, internetLatitude,dbHelper),dbHelper);
         }
 
         @Override

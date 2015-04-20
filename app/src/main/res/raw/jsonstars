@@ -1,0 +1,77 @@
+{
+    "data": "db",
+    "stars": [
+        {
+            "id_star": "1",
+            "name": "Альферац",
+            "r_ascension_hour": "0",
+            "r_ascension_min": "8",
+            "declension_hour": "29",
+            "declension_min": "5"
+        },
+        {
+             "id_star": "2",
+             "name": "Мирах",
+             "r_ascension_hour": "1",
+             "r_ascension_min": "9",
+             "declension_hour": "35",
+             "declension_min": "37"
+        },
+        {
+             "id_star": "3",
+             "name": "Аламак",
+             "r_ascension_hour": "2",
+             "r_ascension_min": "4",
+             "declension_hour": "42",
+             "declension_min": "19"
+        },
+        {
+             "id_star": "4",
+             "name": "Кастор",
+             "r_ascension_hour": "7",
+             "r_ascension_min": "34",
+             "declension_hour": "31",
+             "declension_min": "53"
+        },
+        {
+             "id_star": "5",
+             "name": "Бетельгейзе",
+             "r_ascension_hour": "5",
+             "r_ascension_min": "55",
+             "declension_hour": "7",
+             "declension_min": "24"
+        },
+        {
+             "id_star": "6",
+             "name": "Альшиба",
+             "r_ascension_hour": "12",
+             "r_ascension_min": "8",
+             "declension_hour": "-24",
+             "declension_min": "44"
+        },
+        {
+             "id_star": "7",
+             "name": "Крац",
+             "r_ascension_hour": "12",
+             "r_ascension_min": "34",
+             "declension_hour": "-23",
+             "declension_min": "24"
+        },
+        {
+             "id_star": "8",
+             "name": "Гиена",
+             "r_ascension_hour": "12",
+             "r_ascension_min": "15",
+             "declension_hour": "-17",
+             "declension_min": "32"
+        },
+        {
+             "id_star": "9",
+             "name": "Альгораб",
+             "r_ascension_hour": "12",
+             "r_ascension_min": "30",
+             "declension_hour": "-16",
+             "declension_min": "31"
+        }
+    ]
+}

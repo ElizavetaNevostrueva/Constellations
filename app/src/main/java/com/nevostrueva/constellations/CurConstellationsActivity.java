@@ -20,12 +20,6 @@ public class CurConstellationsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_cur_constellations);
 
         geoLocation = new GeoLocation(this);
-        DbOfStars db = new DbOfStars(this);
-        db.dbConnect();
-        db.getStar();
-        db.getConstellation();
-        db.getStarInCon();
-        db.dbDisconnect();
     }
 
     @Override

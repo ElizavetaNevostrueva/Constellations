@@ -1,0 +1,37 @@
+{
+    "data": "db",
+    "con_stars_in": [
+        {
+               "id_star": "1",
+               "id_con": "1"
+        },
+        {
+               "id_star": "2",
+               "id_con": "1"
+        },
+        {
+               "id_star": "3",
+               "id_con": "1"
+        },
+        {
+               "id_star": "4",
+               "id_con": "2"
+        },
+        {
+               "id_star": "6",
+               "id_con": "5"
+        },
+        {
+               "id_star": "7",
+               "id_con": "5"
+        },
+        {
+               "id_star": "8",
+               "id_con": "5"
+        },
+        {
+               "id_star": "9",
+               "id_con": "5"
+        }
+    ]
+}
