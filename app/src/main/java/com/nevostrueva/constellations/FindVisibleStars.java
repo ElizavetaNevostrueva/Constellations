@@ -32,9 +32,9 @@ public class FindVisibleStars {
 
             do {
                 Double ra = Double.valueOf(Integer.valueOf(c.getString(raHourColIndex)) +
-                        Integer.valueOf(c.getString(raMinColIndex)) / 60);
+                        Double.valueOf(c.getString(raMinColIndex)) / 60);
                 Double dec = Double.valueOf(Integer.valueOf(c.getString(decHourColIndex)) +
-                        Integer.valueOf(c.getString(decMinColIndex)) / 60);
+                        Double.valueOf(c.getString(decMinColIndex)) / 60);
                 if (isStarVisible(lon, lat, ra, dec)) {
                     visibleStars.add(Integer.valueOf(c.getString(idColIndex)));
                 }

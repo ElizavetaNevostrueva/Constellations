@@ -32,6 +32,83 @@
         {
                "id_star": "9",
                "id_con": "5"
-        }
+        },
+        {
+               "id_star": "33",
+               "id_con": "2"
+        },
+        {
+               "id_star": "57",
+               "id_con": "2"
+        },
+        {
+               "id_star": "58",
+               "id_con": "2"
+        },
+        {
+               "id_star": "59",
+               "id_con": "2"
+        },
+        {
+               "id_star": "34",
+               "id_con": "3"
+        },
+        {
+               "id_star": "60",
+               "id_con": "3"
+        },
+        {
+               "id_star": "61",
+               "id_con": "3"
+        },
+        {
+               "id_star": "62",
+               "id_con": "3"
+        },
+        {
+               "id_star": "63",
+               "id_con": "3"
+        },
+         {
+                "id_star": "64",
+                "id_con": "3"
+         },
+         {
+                "id_star": "65",
+                "id_con": "3"
+         },
+        {
+               "id_star": "66",
+               "id_con": "4"
+        },
+        {
+               "id_star": "67",
+               "id_con": "4"
+        },
+         {
+                "id_star": "68",
+                "id_con": "4"
+         },
+         {
+                "id_star": "69",
+                "id_con": "4"
+         },
+         {
+                "id_star": "70",
+                "id_con": "4"
+         },
+         {
+                "id_star": "71",
+                "id_con": "4"
+         },
+         {
+                "id_star": "72",
+                "id_con": "6"
+         },
+         {
+                "id_star": "73",
+                "id_con": "6"
+         }
+
     ]
 }

@@ -1,5 +1,6 @@
 package com.nevostrueva.constellations;
 
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
@@ -11,14 +12,16 @@ import java.util.Iterator;
  * Created by iiopok on 21.04.2015.
  */
 public class FindVisibleConstellations {
-    public static ArrayList<Integer> findVisibleConstellations(ArrayList<Integer> visibleStars, DBHelper dbHelper){
+    public static Constellation[] findVisibleConstellations(Context context, ArrayList<Integer> visibleStars, DBHelper dbHelper){
+        Constellation[] parametrsVisCon;
+        Constellation visCon = new Constellation();
         ArrayList<Integer> visibleConstallations = new ArrayList<>();
         ArrayList<Integer> idsConstallations = new ArrayList<>();
         ArrayList<Integer> constallationsStars = new ArrayList<>();
         Iterator<Integer> iter = visibleStars.iterator();
 
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-       // Cursor c = db.query("con_stars_in", null, "id_star = ?", , null, null, null);
+
 
         // ставим позицию курсора на первую строку выборки
         // если в выборке нет строк, вернется false
@@ -28,6 +31,7 @@ public class FindVisibleConstellations {
         while(iter.hasNext()) {
             Integer next = iter.next();
             c = db.query("con_stars_in", new String[]{"id_con"}, "id_star = ?", new String[]{next.toString()}, null, null, null);
+
             if (c.moveToFirst()) {
 
                 // определяем номера столбцов по имени в выборке
@@ -74,10 +78,33 @@ public class FindVisibleConstellations {
             constallationsStars.clear();
 
         }
+        Iterator<Integer> iterVisCon = visibleConstallations.iterator();
+        parametrsVisCon = new Constellation[visibleConstallations.size()];
+        while (iterVisCon.hasNext()) {
+            Integer nextCon = iterVisCon.next();
+            c = db.query("constellations", null, "id_con = ?", new String[]{nextCon.toString()}, null, null, null);
+            if (c.moveToFirst()) {
+
+                int nameColIndex = c.getColumnIndex("name_con");
+                int imageColIndex = c.getColumnIndex("image_con");
+
+                parametrsVisCon = new Constellation[c.getCount()];
+                int i= 0;
+                do {
+                    visCon.conImage =  Integer.valueOf(c.getString(imageColIndex));
+                    visCon.conName = c.getString(nameColIndex);
+                    parametrsVisCon[i] = visCon;
+                    i++;
+                } while (c.moveToNext());
+
+            } else
+                Log.d("read_log", "0 rows");
+            c.close();
+        }
             db.close();
             Log.d("visible_con_log", visibleConstallations.toString());
 
-        return visibleConstallations;
+        return parametrsVisCon;
 
     }
 }

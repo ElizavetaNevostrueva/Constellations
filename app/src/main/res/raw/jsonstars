@@ -72,6 +72,592 @@
              "r_ascension_min": "30",
              "declension_hour": "-16",
              "declension_min": "31"
+        },
+        {
+             "id_star": "10",
+             "name": "Акамар",
+             "r_ascension_hour": "2",
+             "r_ascension_min": "58",
+             "declension_hour": "-40",
+             "declension_min": "18"
+        },
+        {
+             "id_star": "11",
+             "name": "Ахернар",
+             "r_ascension_hour": "1",
+             "r_ascension_min": "37",
+             "declension_hour": "-57",
+             "declension_min": "14"
+        },
+        {
+             "id_star": "12",
+             "name": "Ахирд",
+             "r_ascension_hour": "0",
+             "r_ascension_min": "49",
+             "declension_hour": "57",
+             "declension_min": "49"
+        },
+        {
+             "id_star": "13",
+             "name": "Акраб",
+             "r_ascension_hour": "16",
+             "r_ascension_min": "5",
+             "declension_hour": "-19",
+             "declension_min": "48"
+        },
+        {
+             "id_star": "14",
+             "name": "Акрукс",
+             "r_ascension_hour": "12",
+             "r_ascension_min": "26",
+             "declension_hour": "-63",
+             "declension_min": "6"
+        },
+        {
+             "id_star": "15",
+             "name": "Акубенс",
+             "r_ascension_hour": "8",
+             "r_ascension_min": "58",
+             "declension_hour": "11",
+             "declension_min": "51"
+        },
+        {
+             "id_star": "16",
+             "name": "Адхафера",
+             "r_ascension_hour": "10",
+             "r_ascension_min": "16",
+             "declension_hour": "23",
+             "declension_min": "25"
+        },
+        {
+             "id_star": "17",
+             "name": "Адара",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "58",
+             "declension_hour": "-28",
+             "declension_min": "58"
+        },
+        {
+             "id_star": "18",
+             "name": "Аин",
+             "r_ascension_hour": "4",
+             "r_ascension_min": "28",
+             "declension_hour": "-19",
+             "declension_min": "11"
+        },
+        {
+             "id_star": "19",
+             "name": "Альджеди",
+             "r_ascension_hour": "20",
+             "r_ascension_min": "18",
+             "declension_hour": "-12",
+             "declension_min": "32"
+        },
+        {
+             "id_star": "20",
+             "name": "Алараф",
+             "r_ascension_hour": "11",
+             "r_ascension_min": "50",
+             "declension_hour": "1",
+             "declension_min": "45"
+        },
+        {
+             "id_star": "21",
+             "name": "Альбали",
+             "r_ascension_hour": "20",
+             "r_ascension_min": "47",
+             "declension_hour": "-9",
+             "declension_min": "29"
+        },
+        {
+             "id_star": "22",
+             "name": "Альбирео",
+             "r_ascension_hour": "19",
+             "r_ascension_min": "30",
+             "declension_hour": "27",
+             "declension_min": "57"
+        },
+        {
+             "id_star": "23",
+             "name": "Альчиба",
+             "r_ascension_hour": "12",
+             "r_ascension_min": "8",
+             "declension_hour": "-24",
+             "declension_min": "43"
+        },
+        {
+             "id_star": "24",
+             "name": "Алькор",
+             "r_ascension_hour": "13",
+             "r_ascension_min": "25",
+             "declension_hour": "-54",
+             "declension_min": "59"
+        },
+        {
+             "id_star": "25",
+             "name": "Альциона",
+             "r_ascension_hour": "3",
+             "r_ascension_min": "47",
+             "declension_hour": "24",
+             "declension_min": "6"
+        },
+        {
+             "id_star": "26",
+             "name": "Альдебаран",
+             "r_ascension_hour": "4",
+             "r_ascension_min": "35",
+             "declension_hour": "16",
+             "declension_min": "30"
+        },
+        {
+             "id_star": "27",
+             "name": "Альдерамин",
+             "r_ascension_hour": "21",
+             "r_ascension_min": "18",
+             "declension_hour": "62",
+             "declension_min": "35"
+        },
+        {
+             "id_star": "28",
+             "name": "Альфирк",
+             "r_ascension_hour": "21",
+             "r_ascension_min": "28",
+             "declension_hour": "70",
+             "declension_min": "33"
+        },
+        {
+             "id_star": "29",
+             "name": "Альгебар",
+             "r_ascension_hour": "5",
+             "r_ascension_min": "14",
+             "declension_hour": "-8",
+             "declension_min": "12"
+        },
+        {
+             "id_star": "30",
+             "name": "Альгениб",
+             "r_ascension_hour": "0",
+             "r_ascension_min": "13",
+             "declension_hour": "15",
+             "declension_min": "11"
+        },
+        {
+             "id_star": "31",
+             "name": "Альгиеба",
+             "r_ascension_hour": "10",
+             "r_ascension_min": "19",
+             "declension_hour": "19",
+             "declension_min": "50"
+        },
+        {
+             "id_star": "32",
+             "name": "Алголь",
+             "r_ascension_hour": "3",
+             "r_ascension_min": "8",
+             "declension_hour": "40",
+             "declension_min": "57"
+        },
+        {
+             "id_star": "33",
+             "name": "Альхена",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "37",
+             "declension_hour": "16",
+             "declension_min": "24"
+        },
+        {
+             "id_star": "34",
+             "name": "Алиот",
+             "r_ascension_hour": "12",
+             "r_ascension_min": "54",
+             "declension_hour": "55",
+             "declension_min": "57"
+        },
+        {
+             "id_star": "35",
+             "name": "Алькаид",
+             "r_ascension_hour": "13",
+             "r_ascension_min": "47",
+             "declension_hour": "49",
+             "declension_min": "18"
+        },
+        {
+             "id_star": "36",
+             "name": "Алкалуропс",
+             "r_ascension_hour": "15",
+             "r_ascension_min": "24",
+             "declension_hour": "37",
+             "declension_min": "22"
+        },
+        {
+             "id_star": "37",
+             "name": "Алькес",
+             "r_ascension_hour": "10",
+             "r_ascension_min": "59",
+             "declension_hour": "-18",
+             "declension_min": "17"
+        },
+        {
+             "id_star": "38",
+             "name": "Альнаир",
+             "r_ascension_hour": "22",
+             "r_ascension_min": "8",
+             "declension_hour": "-46",
+             "declension_min": "57"
+        },
+        {
+             "id_star": "39",
+             "name": "Эль-Нат",
+             "r_ascension_hour": "5",
+             "r_ascension_min": "26",
+             "declension_hour": "28",
+             "declension_min": "36"
+        },
+        {
+             "id_star": "40",
+             "name": "Альнилам",
+             "r_ascension_hour": "5",
+             "r_ascension_min": "36",
+             "declension_hour": "-1",
+             "declension_min": "12"
+        },
+        {
+             "id_star": "41",
+             "name": "Альнитак",
+             "r_ascension_hour": "5",
+             "r_ascension_min": "40",
+             "declension_hour": "-1",
+             "declension_min": "56"
+        },
+        {
+             "id_star": "42",
+             "name": "Альфард",
+             "r_ascension_hour": "9",
+             "r_ascension_min": "27",
+             "declension_hour": "-8",
+             "declension_min": "39"
+        },
+        {
+             "id_star": "43",
+             "name": "Альфекка",
+             "r_ascension_hour": "15",
+             "r_ascension_min": "34",
+             "declension_hour": "26",
+             "declension_min": "42"
+        },
+        {
+             "id_star": "44",
+             "name": "Альраи",
+             "r_ascension_hour": "23",
+             "r_ascension_min": "39",
+             "declension_hour": "77",
+             "declension_min": "37"
+        },
+        {
+             "id_star": "45",
+             "name": "Альсафи",
+             "r_ascension_hour": "19",
+             "r_ascension_min": "32",
+             "declension_hour": "69",
+             "declension_min": "39"
+        },
+        {
+             "id_star": "46",
+             "name": "Альшаин",
+             "r_ascension_hour": "19",
+             "r_ascension_min": "55",
+             "declension_hour": "6",
+             "declension_min": "24"
+        },
+        {
+             "id_star": "47",
+             "name": "Аль сухайль",
+             "r_ascension_hour": "9",
+             "r_ascension_min": "7",
+             "declension_hour": "-43",
+             "declension_min": "25"
+        },
+        {
+             "id_star": "48",
+             "name": "Альтаир",
+             "r_ascension_hour": "19",
+             "r_ascension_min": "50",
+             "declension_hour": "8",
+             "declension_min": "52"
+        },
+        {
+             "id_star": "49",
+             "name": "Альтаис",
+             "r_ascension_hour": "19",
+             "r_ascension_min": "12",
+             "declension_hour": "67",
+             "declension_min": "39"
+        },
+        {
+             "id_star": "50",
+             "name": "Альтерф",
+             "r_ascension_hour": "9",
+             "r_ascension_min": "31",
+             "declension_hour": "22",
+             "declension_min": "58"
+        },
+        {
+             "id_star": "51",
+             "name": "Алудра",
+             "r_ascension_hour": "7",
+             "r_ascension_min": "24",
+             "declension_hour": "-29",
+             "declension_min": "18"
+        },
+        {
+             "id_star": "52",
+             "name": "Алула Южная",
+             "r_ascension_hour": "13",
+             "r_ascension_min": "23",
+             "declension_hour": "54",
+             "declension_min": "55"
+        },
+        {
+             "id_star": "53",
+             "name": "Алула Северная",
+             "r_ascension_hour": "11",
+             "r_ascension_min": "18",
+             "declension_hour": "33",
+             "declension_min": "5"
+        },
+        {
+             "id_star": "54",
+             "name": "Альваид",
+             "r_ascension_hour": "17",
+             "r_ascension_min": "30",
+             "declension_hour": "52",
+             "declension_min": "18"
+        },
+        {
+             "id_star": "55",
+             "name": "Алия",
+             "r_ascension_hour": "18",
+             "r_ascension_min": "56",
+             "declension_hour": "4",
+             "declension_min": "12"
+        },
+        {
+             "id_star": "56",
+             "name": "Анха",
+             "r_ascension_hour": "22",
+             "r_ascension_min": "16",
+             "declension_hour": "-7",
+             "declension_min": "47"
+        },
+        {
+             "id_star": "57",
+             "name": "Поллукс",
+             "r_ascension_hour": "7",
+             "r_ascension_min": "45",
+             "declension_hour": "28",
+             "declension_min": "1"
+        },
+        {
+             "id_star": "58",
+             "name": "Вазад",
+             "r_ascension_hour": "7",
+             "r_ascension_min": "20",
+             "declension_hour": "21",
+             "declension_min": "59"
+        },
+        {
+             "id_star": "59",
+             "name": "Мебсута",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "44",
+             "declension_hour": "25",
+             "declension_min": "8"
+        },
+        {
+             "id_star": "60",
+             "name": "Дубхе",
+             "r_ascension_hour": "11",
+             "r_ascension_min": "4",
+             "declension_hour": "61",
+             "declension_min": "45"
+        },
+        {
+             "id_star": "61",
+             "name": "Мерак",
+             "r_ascension_hour": "11",
+             "r_ascension_min": "2",
+             "declension_hour": "56",
+             "declension_min": "23"
+        },
+        {
+             "id_star": "62",
+             "name": "Фекда",
+             "r_ascension_hour": "11",
+             "r_ascension_min": "54",
+             "declension_hour": "53",
+             "declension_min": "42"
+        },
+        {
+             "id_star": "63",
+             "name": "Мегрец",
+             "r_ascension_hour": "12",
+             "r_ascension_min": "15",
+             "declension_hour": "57",
+             "declension_min": "2"
+        },
+        {
+             "id_star": "64",
+             "name": "Мицар",
+             "r_ascension_hour": "13",
+             "r_ascension_min": "24",
+             "declension_hour": "54",
+             "declension_min": "56"
+        },
+        {
+             "id_star": "65",
+             "name": "Бенеташ",
+             "r_ascension_hour": "13",
+             "r_ascension_min": "48",
+             "declension_hour": "49",
+             "declension_min": "19"
+        },
+        {
+             "id_star": "66",
+             "name": "Сириус",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "45",
+             "declension_hour": "-16",
+             "declension_min": "43"
+        },
+        {
+             "id_star": "67",
+             "name": "Мирцам",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "23",
+             "declension_hour": "-17",
+             "declension_min": "57"
+        },
+        {
+             "id_star": "68",
+             "name": "Везен",
+             "r_ascension_hour": "7",
+             "r_ascension_min": "8",
+             "declension_hour": "-26",
+             "declension_min": "24"
+        },
+        {
+             "id_star": "69",
+             "name": "Адара",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "59",
+             "declension_hour": "-28",
+             "declension_min": "58"
+        },
+        {
+             "id_star": "70",
+             "name": "Фуруд",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "20",
+             "declension_hour": "-30",
+             "declension_min": "4"
+        },
+        {
+             "id_star": "71",
+             "name": "Алудра",
+             "r_ascension_hour": "7",
+             "r_ascension_min": "24",
+             "declension_hour": "-29",
+             "declension_min": "18"
+        },
+        {
+             "id_star": "72",
+             "name": "Зубенэльшемали",
+             "r_ascension_hour": "15",
+             "r_ascension_min": "17",
+             "declension_hour": "-9",
+             "declension_min": "22"
+        },
+        {
+             "id_star": "73",
+             "name": "Зубенэльгенуби",
+             "r_ascension_hour": "14",
+             "r_ascension_min": "51",
+             "declension_hour": "-16",
+             "declension_min": "3"
+        },
+        {
+             "id_star": "74",
+             "name": "NO",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "45",
+             "declension_hour": "-16",
+             "declension_min": "43"
+        },
+        {
+             "id_star": "75",
+             "name": "Сириус",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "45",
+             "declension_hour": "-16",
+             "declension_min": "43"
+        },
+        {
+             "id_star": "76",
+             "name": "Сириус",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "45",
+             "declension_hour": "-16",
+             "declension_min": "43"
+        },
+        {
+             "id_star": "77",
+             "name": "Сириус",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "45",
+             "declension_hour": "-16",
+             "declension_min": "43"
+        },
+
+        {
+             "id_star": "78",
+             "name": "Сириус",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "45",
+             "declension_hour": "-16",
+             "declension_min": "43"
+        },
+         {
+              "id_star": "79",
+              "name": "Сириус",
+              "r_ascension_hour": "6",
+              "r_ascension_min": "45",
+              "declension_hour": "-16",
+              "declension_min": "43"
+         },
+        {
+             "id_star": "80",
+             "name": "Сириус",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "45",
+             "declension_hour": "-16",
+             "declension_min": "43"
+        },
+        {
+             "id_star": "81",
+             "name": "Сириус",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "45",
+             "declension_hour": "-16",
+             "declension_min": "43"
+        },
+        {
+             "id_star": "82",
+             "name": "Сириус",
+             "r_ascension_hour": "6",
+             "r_ascension_min": "45",
+             "declension_hour": "-16",
+             "declension_min": "43"
         }
+
     ]
 }

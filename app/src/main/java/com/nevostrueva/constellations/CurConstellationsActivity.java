@@ -1,5 +1,6 @@
 package com.nevostrueva.constellations;
 
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -7,7 +8,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class CurConstellationsActivity extends ActionBarActivity {
@@ -19,13 +22,26 @@ public class CurConstellationsActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cur_constellations);
 
+        Constellation con = new Constellation();
+        con.conName = "Созвездия";
+        con.conImage = getResources().getIdentifier("stars","drawable",this.getPackageName());
+        Constellation[] firstDate = new Constellation[]{con};
+        ListView listView = (ListView) this.findViewById(R.id.visible_stars);
+        ConItemAdapter itemAdapter = new ConItemAdapter(this,R.layout.item_star, firstDate);
+        listView.setAdapter(itemAdapter);
+
         geoLocation = new GeoLocation(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        try{
         geoLocation.startListenGeoLocation();
+        }
+        catch (Exception e){
+            Toast.makeText(this,"Включите определение местоположения!",Toast.LENGTH_LONG);
+        }
     }
 
     @Override

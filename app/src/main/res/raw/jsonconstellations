@@ -3,23 +3,81 @@
     "constellations": [
         {
               "id_con": "1",
-              "name": "Андромеда"
+              "name": "Андромеда",
+              "image": "andromeda"
         },
         {
               "id_con": "2",
-              "name": "Близнецы"
+              "name": "Близнецы",
+              "image": "gem"
         },
         {
               "id_con": "3",
-              "name": "Большая медведица"
+              "name": "Большая медведица",
+              "image": "uma"
         },
         {
                "id_con": "4",
-               "name": "Большой пес"
+               "name": "Большой пес",
+               "image": "cma"
         },
         {
                "id_con": "5",
-               "name": "Ворон"
+               "name": "Ворон",
+               "image": "crv"
+        },
+        {
+               "id_con": "6",
+               "name": "Весы",
+               "image": "vesi"
+        },
+
+        {
+               "id_con": "7",
+               "name": "Водолей",
+               "image": ""
+        },
+
+        {
+               "id_con": "8",
+               "name": "Возничий",
+               "image": ""
+        },
+
+        {
+               "id_con": "9",
+               "name": "Волк",
+               "image": ""
+        },
+
+        {
+               "id_con": "10",
+               "name": "Водопас",
+               "image": ""
+        },
+
+        {
+               "id_con": "11",
+               "name": "Геркулес",
+               "image": ""
+        },
+
+        {
+               "id_con": "12",
+               "name": "Гидра",
+               "image": ""
+        },
+
+        {
+               "id_con": "13",
+               "name": "Голубь",
+               "image": ""
+        },
+
+        {
+               "id_con": "14",
+               "name": "Гончие псы",
+               "image": ""
         }
 
     ]

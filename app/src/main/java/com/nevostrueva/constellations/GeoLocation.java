@@ -6,6 +6,8 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.ListView;
 import android.widget.TextView;
 
 /**
@@ -20,15 +22,23 @@ public class GeoLocation {
     private Double internetLongitude = 0.0;
     private TextView gpsCoordinates;
     private TextView internetCoordinates;
+    private ListView visStars;
+    private Constellation[] stars;
     private Activity activity;
     private DBHelper dbHelper;
+    private Context context;
+    private ListView listView;
+    private Constellation[] visResCon;
 
     public GeoLocation(Context context){
         activity = (Activity) context;
         locationManager = (LocationManager) context.getSystemService(context.LOCATION_SERVICE);
-        gpsCoordinates = (TextView) activity.findViewById(R.id.gpsCoordinates);
-        internetCoordinates = (TextView) activity.findViewById(R.id.internetCoordinates);
+        //gpsCoordinates = (TextView) activity.findViewById(R.id.gpsCoordinates);
+        //internetCoordinates = (TextView) activity.findViewById(R.id.internetCoordinates);
+        this.context = context;
         dbHelper=new DBHelper(context);
+        listView = (ListView) activity.findViewById(R.id.visible_stars);
+
     }
 
     public Double getGpsGeoLatitude(){
@@ -65,8 +75,23 @@ public class GeoLocation {
             setGeoLocationParameters(location);
             FindVisibleStars fvs = new FindVisibleStars();
             //fvs.findVisibleStars(internetLongitude, internetLatitude,dbHelper);
-            FindVisibleConstellations.findVisibleConstellations(
-                    fvs.findVisibleStars(internetLongitude, internetLatitude,dbHelper),dbHelper);
+            if (location.getProvider().equals(LocationManager.GPS_PROVIDER)){
+                visResCon = FindVisibleConstellations.findVisibleConstellations(context,
+                        fvs.findVisibleStars((internetLongitude+gpsLongitude)/2, (internetLatitude+gpsLatitude)/2, dbHelper), dbHelper);
+            }else {
+                visResCon = FindVisibleConstellations.findVisibleConstellations(context,
+                        fvs.findVisibleStars(internetLongitude, internetLatitude, dbHelper), dbHelper);
+            }
+            ConItemAdapter itemAdapter;
+            if (visResCon.length!=0) {
+                itemAdapter = new ConItemAdapter(context, R.layout.item_star, visResCon);
+            }else{
+                Constellation mes = new Constellation();
+                mes.conName = "Доступных созвездий нет!";
+                mes.conImage = context.getResources().getIdentifier("stars","drawable",context.getPackageName());
+                itemAdapter = new ConItemAdapter(context, R.layout.item_star, new Constellation[]{mes});
+            }
+            listView.setAdapter(itemAdapter);
         }
 
         @Override
@@ -79,8 +104,25 @@ public class GeoLocation {
             setGeoLocationParameters(locationManager.getLastKnownLocation(provider));
             FindVisibleStars fvs = new FindVisibleStars();
             //fvs.findVisibleStars(internetLongitude, internetLatitude,dbHelper);
-            FindVisibleConstellations.findVisibleConstellations(
-                    fvs.findVisibleStars(internetLongitude, internetLatitude,dbHelper),dbHelper);
+            if (locationManager.getLastKnownLocation(provider).getProvider().equals(LocationManager.GPS_PROVIDER)){
+                visResCon = FindVisibleConstellations.findVisibleConstellations(context,
+                        fvs.findVisibleStars((internetLongitude+gpsLongitude)/2, (internetLatitude+gpsLatitude)/2, dbHelper), dbHelper);
+            }else {
+                visResCon = FindVisibleConstellations.findVisibleConstellations(context,
+                        fvs.findVisibleStars(internetLongitude, internetLatitude, dbHelper), dbHelper);
+            }
+
+            ConItemAdapter itemAdapter;
+            if (visResCon.length!=0) {
+                itemAdapter = new ConItemAdapter(context, R.layout.item_star, visResCon);
+            }else{
+                Constellation mes = new Constellation();
+                mes.conName = "Доступных созвездий нет!";
+                mes.conImage = context.getResources().getIdentifier("stars","drawable",context.getPackageName());
+                itemAdapter = new ConItemAdapter(context, R.layout.item_star, new Constellation[]{mes});
+            }
+            listView.setAdapter(itemAdapter);
+
         }
 
         @Override
@@ -95,11 +137,13 @@ public class GeoLocation {
         if (location.getProvider().equals(LocationManager.GPS_PROVIDER)) {
             gpsLatitude = location.getLatitude();
             gpsLongitude = location.getLongitude();
-            gpsCoordinates.setText("GPS: "+ gpsLatitude.toString()+" "+ gpsLongitude.toString()+"\n");
+            Log.d("gps",gpsLatitude.toString()+" "+ gpsLongitude.toString());
+            //gpsCoordinates.setText("GPS: "+ gpsLatitude.toString()+" "+ gpsLongitude.toString()+"\n");
         } else if (location.getProvider().equals(LocationManager.NETWORK_PROVIDER)) {
             internetLatitude = location.getLatitude();
             internetLongitude = location.getLongitude();
-            internetCoordinates.setText("In: "+ internetLatitude.toString()+" "+ internetLongitude.toString());
+            Log.d("in",internetLatitude.toString()+" "+ internetLongitude.toString());
+            //internetCoordinates.setText("In: "+ internetLatitude.toString()+" "+ internetLongitude.toString());
         }
     }
 

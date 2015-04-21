@@ -20,10 +20,12 @@ public class DBHelper extends SQLiteOpenHelper {
     private InputStream dbStreamStars;
     private InputStream dbStreamCon;
     private InputStream dbStreamStarsIn;
+    private Context context;
 
     public DBHelper(Context context) {
         // конструктор суперкласса
         super(context, "myDB", null, 1);
+        this.context=context;
         try{
             dbStreamStars = context.getResources().openRawResource(R.raw.jsonstars);
             dbStreamCon = context.getResources().openRawResource(R.raw.jsonconstellations);
@@ -41,7 +43,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
         db.execSQL("create table constellations ("
                 + "id_con integer primary key,"
-                + "name_con text" + ");");
+                + "name_con text,"
+                + "image_con int" + ");");
 
         db.execSQL("create table stars ("
                 + "id_star integer primary key,"
@@ -86,6 +89,11 @@ public class DBHelper extends SQLiteOpenHelper {
                 JSONObject constellation = constellations.getJSONObject(i);
                 cv.put("id_con",constellation.getString("id_con"));
                 cv.put("name_con",constellation.getString("name"));
+                if (constellation.getString("image")==""){
+                    cv.put("image_con",context.getResources().getIdentifier("stars","drawable",context.getPackageName()));
+                }else{
+                    cv.put("image_con",context.getResources().getIdentifier(constellation.getString("image"),"drawable",context.getPackageName()));
+                }
                 db.insert("constellations",null,cv);
                 cv.clear();
             }
